@@ -1,8 +1,11 @@
-<TabView>
-  <StackLayout *tabItem="{ title: 'Today' }">
-    <Label text="Tab 1"></Label>
-  </StackLayout>
-  <StackLayout *tabItem="{ title: 'Current Challenge' }">
-    <Label text="Tab 2"></Label>
-  </StackLayout>
+<TabView androidTabsPosition="bottom"
+	androidSelectedTabHighlightColor="#7c015d"
+	selectedTabTextColor="#7c015d"
+	>
+	<StackLayout *tabItem="{ title: 'Today' }">
+  	<router-outlet name="today"></router-outlet>
+	</StackLayout>
+	<StackLayout *tabItem="{ title: 'Current Challenge' }">
+			<router-outlet name="currentChallenge"> </router-outlet>
+	</StackLayout>
 </TabView>
